@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Community Site is a friendly social networking site!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!-- Custom fonts-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+        <body><header>
+            <nav class="navbar bg-dark navbar-dark navbar-expand-sm" id="navigation">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fas fa-at"></i> Community Site
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button> 
+                    <div class="collapse navbar-collapse" id="myTogglerNav">
+                        <div class="navbar-nav mr-auto">
+                            <a class="nav-item nav-link active" href="index.html">Home</a>
+                            <a class="nav-item nav-link " href="/pages/user/User-Search.html">Search Profiles</a>
+                            <a class="nav-item nav-link" href="/pages/registration/Registration.html">Sign Up</a>
+                            <a class="nav-item nav-link" href="/pages/login/LogIn.html">Log In</a>
+                                
+                            <!--
+                                <div class="dropdown">
+                                	<a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="myAccountDropdown" aria-haspopup="true" aria-expanded="false" href="#">My Account</a>
+                                	<div class="dropdown-menu" aria-labelledby="myAccountDropdown">
+                                    <a class="dropdown-item" href="Public-Profile.html">My Profile</a>
+                                	<a class="dropdown-item" href="#">Update Profile</a>
+					               <a class="dropdown-item" href="Search.html">Search Profile</a>
+                                	<a class="dropdown-item" href="Home.html">Log Out</a>
+                                </div>
+                            -->
+                        </div>
+                    </div>
+                    <!-- navbar-nav -->
+             
+
+                </div>
+                <!-- container -->
+            </nav>
+        </header>
+
+    <main>
+		<ul class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+  <li class="breadcrumb-item"><a href="/pages/user/User-Search.html">Search Profiles</a></li>
+
+</ul> 
+        <div class="container-fluid">
+			<form class="mb-5">
+			<fieldset class="form-group">
+				<legend>Search Profiles</legend>
+				
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="name">Name</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="name" placeholder="Name" name="name">
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="username">User Name</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="username" placeholder="User Name" name="userName">
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="company">Company</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="company" placeholder="Company" name="company">
+					</div>
+				</div>
+
+				
+			</fieldset>
+				<div class='text-center'>
+			<!-- type="submit" don't work-->
+			<button class="btn btn-primary" type="button" onclick="search()">Search</button>
+			<button class="btn btn-secondary" type="reset">Clear</button>
+                </div>
+        </form>
+        <p>Note: <br>
+        Clicking "Submit" without any input will return all users. <br>
+        Search is working.</p>
+        </div>
+
+        <section id="display" class="container py-5">
+
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Contact Section -->
+        <section class="contact-section bg-dark">
+            <div class="container-fluid py-5">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-address-book text-primary mb-2 text-success"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50">Block 123, Imaginary Place Street 99 <br> #01-234, X(123456) </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-envelope-square text-primary mb-2 text-danger"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50">
+                                    contact@communitysite.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-phone-square text-primary mb-2 text-info"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50"> +65-6123-4567 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="pt-5 d-flex justify-content-center bg-dark">
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-github"></i>
+            </a>
+        </div>
+        <p class="bg-dark text-white-50 text-center text-monospace text py-2" style="margin-bottom: 0;">
+            &copy; Nick
+        </p>
+    </footer>
+
+    <!-- jQuery , then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script> 
+        function search() {
+            
+            let avatar = [];
+          
+            for (let    i=0, 
+                        end = (Boolean(localStorage.getItem('usersdatabase')) ? localStorage.getItem('usersdatabase').length  :  0 ) + 10;
+                        i<=end; i++) {
+                avatar.push(`https://avatars.dicebear.com/api/avataaars/${i}.svg`);
+                //console.log(i,avatar,end);
+            }
+            
+
+            //console.log("X",avatar)
+            
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then( response => { 
+                    return response.json()  } )
+                .then( json => { 
+                    if ( localStorage.getItem('usersdatabase') === null || localStorage.length === 0) {
+                        localStorage.setItem('usersdatabase', '[]')
+                    }
+                    let usersdatabase = localStorage.getItem("usersdatabase");
+                    let usersdatabaseA = JSON.parse(usersdatabase);
+                    usersdatabaseA.forEach( element => json.push(element))
+                    //console.log("A",json, usersdatabaseA)
+                    return json;
+                    })
+                .then( json => {
+                    const name = document.getElementById('name').value;
+                    const username = document.getElementById('username').value;
+                    const company = document.getElementById('company').value;
+
+                    //console.log(name, username, company)
+                    
+                    if (name + username + company === '' ) {
+                        return json;
+                    }
+                    //console.log(json)
+                    if (name !== '') {
+                    var filteredNameList = json.filter( (element) => { return element.name.toLowerCase().search(name.toLowerCase()) + 1 ? true : false; });
+                    //console.log(filteredNameList);
+                    }
+                    if (username !== '') {
+                    var filteredUserNameList = filteredNameList || json.filter( (element) => { return element.username.toLowerCase().search(username.toLowerCase()) + 1 ? true : false; } );
+                    }
+                    if (company !== '') {
+                    var filteredCompanyNameList = filteredUserNameList || filteredNameList || json.filter( (element) => { return element.company.name.toLowerCase().search(company.toLowerCase()) + 1 ? true : false;} );
+                    console.log(filteredCompanyNameList)
+                    }
+
+                    return filteredNameList || filteredUserNameList || filteredCompanyNameList 
+
+                    
+                })
+                .then( json => {
+                    //console.log("X",json);
+                    
+                    const str = json.reduce( (accumulator, element ) => {
+                        
+                        accumulator += `<div id="${element.id}" class="media mb-4 border bg-light p-4 ">
+                                            <img class="mr-3 img-fluid rounded w-25" src="${avatar[element.id]}" alt="">
+                                            <div class="media-body">				
+                                                
+                                                <p>User Name: ${element.username} </p>
+                                                <p>Email: ${element.email}</p>
+                                                <p>Name: ${element.name} </p>
+                                                <p>Address: ${element.address.street}, ${element.address.suite}, ${element.address.city}, ${element.address.zipcode}</p>
+                                                <p>Phone: ${element.phone}</p>
+                                                <p>Website: ${element.website}</p>
+                                                <p>Company: ${element.company.name}, ${element.company.catchPhrase}, ${element.company.bs}</p>
+                                                <p><button type="button" class="btn btn-secondary" id="${element.id}" onclick="posts(this)">Posts</button>
+                                                
+                                            </div>
+                                    </div>`;
+                       
+                        
+                        return accumulator;
+                    }, '' );
+                    return str;
+                })
+                .then( str => { 
+                    console.log(str.length)
+                    if (str.length === 0) { 
+                        const display = document.getElementById('display') ;
+                        display.innerHTML = "<div class=' bg-light border p-2 text-danger'><strong > No such profile! <strong> </div>"; 
+                     } else {
+                    const display = document.getElementById('display');
+                    display.innerHTML = str;
+                
+                    };  
+                    }
+                )
+                  
+                
+
+        }
+        
+        let posts = (that) => {
+            sessionStorage.setItem('userChsn', that.id);
+            sessionStorage.setItem('referrer', window.location.href);
+            console.log(that.id)
+            location.replace('/pages/user/User-Posts.html')
+        }
+
+window.onload = loginNav;
+
+        function loginNav() {
+    if (document.cookie) {
+
+var loggedInId = document.cookie.slice(11)
+console.log(  loggedInId  )
+//var loggedInO = JSON.parse(localStorage.getItem('usersdatabase'));
+//console.log(loggedInO[loggedInId - 10 -1])
+
+navigation.innerHTML =`            <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+    <i class="fas fa-at"></i> Community Site
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button> 
+<div class="collapse navbar-collapse" id="myTogglerNav">
+    <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link active" href="index.html">Home</a>
+        <a class="nav-item nav-link " href="/pages/user/User-Search.html">Search Profiles</a>
+        <!--
+        <a class="nav-item nav-link" href="Registration.html">Sign Up</a>
+        <a class="nav-item nav-link" href="LogIn.html">Log In</a>
+            -->
+
+            <div class="dropdown">
+                <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="myAccountDropdown" aria-haspopup="true" aria-expanded="false" href="#">My Account</a>
+                <div class="dropdown-menu" aria-labelledby="myAccountDropdown">
+                <a class="dropdown-item" href="/pages/user/User-Add_Post.html">Add Post</a>
+                <a class="dropdown-item" href="/pages/user/User-Update_profile.html">Update Profile</a>
+               
+                <a class="dropdown-item" onclick='logOut()'>Log Out</a>
+            </div>
+        
+    </div>
+</div>
+<!-- navbar-nav -->
+</div>
+
+<!-- collapse -->
+<form class="form-inline d-none d-lg-inline-block d-xl-inline-block">
+<div class="input-group d-none">
+  <input type="text" class="form-control text" placeholder="Quick Profile Search" aria-label="Quick Profile Search" aria-describedby="">
+  <div class="input-group-append">
+    <button class="btn btn-outline-light" type="submit">Go</button>
+  </div>
+</div>
+
+</form>
+</div>
+<!-- container -->`
+
+} else {
+
+return;
+}
+
+}
+
+function logOut() {
+document.cookie = "loggedInAs=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+location.replace("/index.html")
+}
+        </script>
+</body>
+
+</html>

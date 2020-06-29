@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Community Site is a friendly social networking site!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!-- Custom fonts-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+        <body>
+            <header>
+            <nav class="navbar bg-dark navbar-dark navbar-expand-sm" id="navigation">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fas fa-at"></i> Community Site
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button> 
+                    <div class="collapse navbar-collapse" id="myTogglerNav">
+                        <div class="navbar-nav mr-auto">
+                            <a class="nav-item nav-link active" href="index.html">Home</a>
+                            <a class="nav-item nav-link " href="/pages/user/User-Search.html">Search Profiles</a>
+                            <a class="nav-item nav-link" href="/pages/registration/Registration.html">Sign Up</a>
+                            <a class="nav-item nav-link" href="/pages/login/LogIn.html">Log In</a>
+                                
+                            <!--
+                                <div class="dropdown">
+                                	<a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="myAccountDropdown" aria-haspopup="true" aria-expanded="false" href="#">My Account</a>
+                                	<div class="dropdown-menu" aria-labelledby="myAccountDropdown">
+                                    <a class="dropdown-item" href="Public-Profile.html">My Profile</a>
+                                	<a class="dropdown-item" href="#">Update Profile</a>
+					               <a class="dropdown-item" href="Search.html">Search Profile</a>
+                                	<a class="dropdown-item" href="Home.html">Log Out</a>
+                                </div>
+                            -->
+                        </div>
+                    </div>
+                    <!-- navbar-nav -->
+             
+
+                </div>
+                <!-- container -->
+            </nav>
+        </header>
+
+    <main>
+		<ul class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+  <li class="breadcrumb-item"><a href="/pages/user/User-Update_Profile.html">Update Profile</a></li>
+
+</ul> 
+<section id="" class="container-fluid">
+    <div id="userprofile" class="media mb-4">
+        <img class="mr-3 img-fluid rounded w-25" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADR0lEQVR4nO2avWsUQRiHnxi5aAqDgSQkWBklooVEtBALFUSMhSj6L4jfhVVE1MpOQXs/Cu1S+NVZiBgT8BviWUjEqEkQBRUjKgTOnMW8413OyeZ2dvbmLpkHhk129vfu+/7uZmZ3byEQCAQCARM7gTEgX+NtDOixMWAuFK/bqI0BWlzrRNaxoIKJVCXBAA/n7AYuAlngh7QscEH6qgbXc0ATcBWYYubJagq4DCxxeF7rOlwa0Aa8kHg/gXPAepQpTcAG4Lz05YHnQKujc3s3YCEwKLGGgOURx3aihkMeeCjapHg34LTEGaG8T7UNeCeakw7O79WAJuC7xNkaQ7dNNN9IPh94NeCAxLhvoe0X7f6EOXi9ENoh2+sW2mslMSqOi2/AW4mx0kLbJdo3CXPwOgT0stZooW2ksGwmwesQ0MvYlIVWJ51qjmkbMCHbpRZarZmIPCohaRvwQbadFtoVJTFSIW0DsrJdZ6HVN0avHOViJG0D+mW73UKrl78HjnKJjYtVoBXIAZPEmweaRZMDWhLm4P1e4JbEORVDc0Y0Nxyc36sBdRSK+Up5n2aLHJsHzpJ8mHoxoA7YhbqvL37gcVv6onR3SjRZYB/2RlTUAFPh40Av8Fn+vwTUG7T1wBU55hNwHHhfFOclsJdoA01UxICZCj8GLJJjNgG/pe8ZsBs1SbbK31r7C9gomgxwEHUtoOMOEc+I1A0wFX6UQuHFdDP9Uy1tI8Bagy4DHEL9wFFsxB6HdcQWtgP3KK/wYhqBI6jHZF+kDaAKXDyLtgE4zHQjbhI9uaZiQDMwTGF2L6dwlzSgTNSrxbDkZCIVA+5K3xOgwya4Izokh7zkZMK5AVsozNTtNoEd047KJQ9sNvQ7N6BP9vfaBE2JE6ic+gx9zg14Lfu7bIKmxCpUTh8Nfc4NmJT9GZugKZFB5ZQz9Dk3wNVNkmus8g0/j/tOwDfBAAuNfsRdySu/2dC5/HEZdKbJ42lRX7W1xzHqsDZgDfAIteT4Lli3nOS0uhIG1BphGYwirgGDqFdXammfNaavzlzZ9495PwTivoU1wP9uVvs+a8IqMB+Y9wZEzQHjwDLmxjAYsxH1MP35e622UTy+ahcIBAKBauYvjUY9DILong4AAAAASUVORK5CYII="g" alt="">
+
+        <div class="media-body">				
+            <h2> No user selected </h2>
+
+            
+        </div>
+    </div>
+ 
+			
+		</section>
+        <div class="container-fluid">
+			<form class="mb-5">
+			<fieldset class="form-group">
+				<legend>Update Profile</legend>
+				
+
+				
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="email">Email <span class="text-danger">*</span></label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="email" placeholder="user@example.com" name="email">
+					</div>
+				</div>
+								
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="password">Password<span class="text-danger">*</span></label>
+					<div class="col-md-10">
+						<input class="form-control" type="password" id="password" placeholder="Your password" name="password">
+					</div>
+				</div>
+								
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="confirmpassword">Confirm Password<span class="text-danger">*</span></label>
+					<div class="col-md-10">
+						<input class="form-control" type="password" id="confirmpassword" placeholder="Confirm password" name="confirmPassword">
+					</div>
+                </div>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="username">User Name </label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="username" placeholder="Your user name" name="userName">
+					</div>
+                </div>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="name">Name </label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="name" placeholder="Your name" name="name">
+					</div>
+				</div>
+				
+
+                <fieldset class="container-fluid border p2 my-5 ">
+                    <legend class="w-auto h5 font-weight-normal">Address:</legend>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="street">Street</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="street" placeholder="Your street" name="street">
+					</div>
+                </div>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="suite">Suite</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="suite" placeholder="Your suite" name="suite">
+					</div>
+                </div>
+				
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="city">City</label>
+					<div class="col-md-10">
+						  <select name="city" class="custom-select" id="city">
+                            <option value="" selected>City </option>
+                            <option value="Gwenborough">Gwenborough </option>
+                            <option value="Wisokyburgh">Wisokyburgh </option>
+                            <option value="McKenziehaven">McKenziehaven </option>
+                            <option value="South Elvis">South Elvis </option>
+                            <option value="Roscoeview">Roscoeview </option>
+                            <option value="South Christy">South Christy </option>
+                            <option value="Howemouth">Howemouth </option>
+                            <option value="Aliyaview">Aliyaview </option>
+                            <option value="Bartholomebury">Bartholomebury </option>
+                            <option value="Lebsackbury">Lebsackbury </option>                       
+                          </select>
+					</div>
+                </div>
+
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="zipcode">Zipcode</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="zipcode" placeholder="Your zipcode" name="zipcode">
+					</div>
+                </div>
+
+                </fieldset>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="phone">Phone </label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="phone" placeholder="Your phone number" name="phone">
+					</div>
+                </div>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="website">Website </label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="website" placeholder="www.example.com" name="website">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="companyname">Company Name</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="companyname" placeholder="Your company name" name="companyname">
+					</div>
+                </div>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="companycatchphrase">Company Catchphrase</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="companycatchphrase" placeholder="Your company catchphrase" name="companycatchphrase">
+					</div>
+                </div>
+                <div class="form-group row">
+					<label class="col-form-label text-md-right col-md-2" for="companybusinessslogan">Company Business Slogan</label>
+					<div class="col-md-10">
+						<input class="form-control" type="text" id="companybusinessslogan" placeholder="Your company business slogan" name="companybusinessslogan">
+					</div>
+				</div>
+                
+
+				
+		</fieldset>
+				
+			<div class="form-text mb-2 text-center"> <span class="text-danger">*</span> marks required fields</div>
+            <!-- type="submit  don't work -->
+            <div class="text-center">
+            <button class="btn btn-primary" type="button" onclick="confirm(this)">Update</button>
+			<button class="btn btn-secondary" type="reset">Clear</button>
+            </div>
+		</form>
+		</div>
+		
+
+	
+    </main>
+
+    <footer>
+        <!-- Contact Section -->
+        <section class="contact-section bg-dark">
+            <div class="container-fluid py-5">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-address-book text-primary mb-2 text-success"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50">Block 123, Imaginary Place Street 99 <br> #01-234, X(123456) </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-envelope-square text-primary mb-2 text-danger"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50">
+                                    contact@communitysite.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-phone-square text-primary mb-2 text-info"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50"> +65-6123-4567 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="pt-5 d-flex justify-content-center bg-dark">
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-github"></i>
+            </a>
+        </div>
+        <p class="bg-dark text-white-50 text-center text-monospace text py-2" style="margin-bottom: 0;">
+            &copy; Nick <br> <a href="https://icons8.com/icon/103865/name">Name icon by Icons8</a>
+        </p>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        window.onload = () => {
+
+loginNav();
+load();
+
+if (document.cookie) {
+
+    var loggedInId = document.cookie.slice(11)
+    console.log(  loggedInId  )
+    var loggedInO = JSON.parse(localStorage.getItem('usersdatabase'));
+    console.log(loggedInO[loggedInId - 10 -1])
+} else {
+
+    return;
+}
+
+fetch(`https://avatars.dicebear.com/api/avataaars/${loggedInId}.svg`)
+    .then( response => { 
+        /*id*/
+            document.getElementById('userprofile').innerHTML = `<img src=${response.url} >
+                                            <div class="media-body">				
+                                                <h2 class="text-info">${loggedInO[loggedInId - 10 -1].username  }</h2>
+                                                <h5>Website: ${loggedInO[loggedInId - 10 -1].website} </h5>
+                                                <h5>Company Name: ${loggedInO[loggedInId - 10 -1].company.name}</h5>
+                                                <h5>Company Catch Phrase: ${loggedInO[loggedInId - 10 -1].company.catchPhrase}</h5>
+                                                <h5>Company Mission: ${loggedInO[loggedInId - 10 - 1].company.bs}</h5>
+                                            </div>`; 
+                                            console.log(response) } )
+
+        
+
+}
+
+function loginNav() {
+    if (document.cookie) {
+
+var loggedInId = document.cookie.slice(11)
+console.log(  loggedInId  )
+var loggedInO = JSON.parse(localStorage.getItem('usersdatabase'));
+console.log(loggedInO[loggedInId - 10 -1])
+
+navigation.innerHTML =`            <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+<div class="container-fluid">
+<a class="navbar-brand" href="#">
+    <i class="fas fa-at"></i> Community Site
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button> 
+<div class="collapse navbar-collapse" id="myTogglerNav">
+    <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link active" href="index.html">Home</a>
+        <a class="nav-item nav-link " href="/pages/user/User-Search.html">Search Profiles</a>
+        <!--
+        <a class="nav-item nav-link" href="Registration.html">Sign Up</a>
+        <a class="nav-item nav-link" href="LogIn.html">Log In</a>
+            -->
+
+            <div class="dropdown">
+                <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="myAccountDropdown" aria-haspopup="true" aria-expanded="false" href="#">My Account</a>
+                <div class="dropdown-menu" aria-labelledby="myAccountDropdown">
+                <a class="dropdown-item" href="/pages/user/User-Add_Post.html">Add Post</a>
+                <a class="dropdown-item" href="/pages/user/User-Update_profile.html">Update Profile</a>
+               
+                <a class="dropdown-item" onclick='logOut()'>Log Out</a>
+            </div>
+        
+    </div>
+</div>
+<!-- navbar-nav -->
+</div>
+
+<!-- collapse -->
+<form class="form-inline d-none d-lg-inline-block d-xl-inline-block">
+<div class="input-group d-none">
+  <input type="text" class="form-control text" placeholder="Quick Profile Search" aria-label="Quick Profile Search" aria-describedby="">
+  <div class="input-group-append">
+    <button class="btn btn-outline-light" type="submit">Go</button>
+  </div>
+</div>
+
+</form>
+</div>
+<!-- container -->`
+
+} else {
+
+return;
+}
+
+}
+
+function logOut() {
+document.cookie = "loggedInAs=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+location.replace("/index.html")
+}
+
+const load = () => {
+        const usersList = localStorage.getItem('usersdatabase');
+        const usersListO = JSON.parse(usersList);
+        const cookieID = document.cookie.slice(11) -10 -1;
+
+        const userdata  = usersListO[cookieID]; 
+        
+        console.log(typeof userdata.username , 'hello');
+
+        const   email = document.getElementById('email'), 
+                password = document.getElementById('password'), 
+                confirmpassword = document.getElementById('confirmpassword'), 
+                username = document.getElementById('username'), 
+                name = document.getElementById('name'), 
+                street = document.getElementById('street'), 
+                suite = document.getElementById('suite'), 
+                city = document.getElementById('city'), 
+                zipcode = document.getElementById('zipcode'), 
+                phone = document.getElementById('phone'), 
+                website = document.getElementById('website'),
+                companyname = document.getElementById('companyname'), 
+                companycatchphrase = document.getElementById('companycatchphrase'), 
+                companybusinessslogan = document.getElementById('companybusinessslogan');
+                //console.log(email,password,confirmpassword,username,name,street,suite,city,phone,zipcode,website,companyname,companycatchphrase,companybusinessslogan);
+                
+                email.value = userdata.email;
+                
+                password.value = userdata.password
+                
+                confirmpassword.value = userdata.confirmpassword
+                username.value = userdata.username;
+                name.value = userdata.name;
+                //console.log(userdata.address)
+                street.value = userdata.address.street;
+                suite.value = userdata.address.suite;
+                city.value = userdata.address.city;
+                zipcode.value = userdata.address.zipcode;
+                phone.value = userdata.phone;
+                website.value = userdata.website;
+                companyname.value = userdata.company.name;
+                companycatchphrase.value = userdata.company.catchPhrase;
+                companybusinessslogan.value = userdata.company.bs;
+    }
+
+    function confirm(evt) {
+            const   email = document.getElementById('email').value,
+                    password = document.getElementById('password').value,
+                    confirmpassword = document.getElementById('confirmpassword').value,
+                    username = document.getElementById('username').value,
+                    name = document.getElementById('name').value,
+                    street = document.getElementById('street').value,
+                    suite = document.getElementById('suite').value;
+            const   cityNode = document.getElementById('city');
+                  
+            const   city = cityNode.options[cityNode.selectedIndex].value;
+
+            const   zipcode = document.getElementById('zipcode').value,
+                    phone = document.getElementById('phone').value,
+                    website = document.getElementById('website').value,
+                    companyname = document.getElementById('companyname').value,
+                    companycatchphrase = document.getElementById('companycatchphrase').value,
+                    companybusinessslogan = document.getElementById('companybusinessslogan').value;
+
+                    console.log(email, password, confirmpassword,username,name,street,suite,city,zipcode,phone,website,companyname,companycatchphrase,companybusinessslogan)
+                    
+
+            
+            if (email === '') {
+                
+                alert("Email is a mandatory field!")
+                document.getElementById('email').focus()
+                return;
+            }
+            
+
+            let dbEmails = [];
+            JSON.parse(localStorage.getItem('usersdatabase')).forEach(element => {
+                dbEmails.push(element.email);
+            });
+            let emailOfUser = JSON.parse(localStorage.getItem('usersdatabase'))[document.cookie.slice(11) - 10 -1].email ;
+            //console.log(emailOfUser,'email')
+            let indexOfUserEmail = dbEmails.indexOf(emailOfUser);
+            dbEmails.splice(indexOfUserEmail, 1);
+            let totalEmailsWithoutUserEmail = [  "Sincere@april.biz",
+                                                "Shanna@melissa.tv",
+                                                "Nathan@yesenia.net",
+                                                "Julianne.OConner@kory.org",
+                                                "Lucio_Hettinger@annie.ca",
+                                                "Karley_Dach@jasper.info",
+                                                "Telly.Hoeger@billy.biz",
+                                                "Sherwood@rosamond.me",
+                                                "Chaim_McDermott@dana.io",
+                                                "Rey.Padberg@karina.biz", ...dbEmails];
+
+            console.log(totalEmailsWithoutUserEmail);
+            if (totalEmailsWithoutUserEmail.includes(email)   )   {
+                                            
+                alert("Email already registered!")
+                document.getElementById('email').focus()
+                return;
+
+                }
+
+            if (password === '') {
+                
+                alert("Passwords is a mandatory field!")
+                document.getElementById('password').focus()
+                return;
+            }
+            if (confirmpassword !== password) {
+                
+                alert("Passwords do not match!")
+                document.getElementById('password').focus()
+                return;
+            }
+
+            const usersList = localStorage.getItem('usersdatabase');
+            const usersListArray = JSON.parse(usersList);
+            const cookieID = document.cookie.slice(11) - 10 -1;
+            usersListArray[cookieID] = {id:cookieID +11, email, password, confirmpassword,username,name,address: {street,suite,city,zipcode},phone,website,company: {name: companyname,catchPhrase: companycatchphrase,bs: companybusinessslogan}}; 
+            console.log(usersListArray[cookieID], cookieID)
+
+            let updatedusersdatabase = JSON.stringify(usersListArray);
+            localStorage.setItem('usersdatabase', updatedusersdatabase);
+            console.log(localStorage);
+            window.location.replace('/pages/user/User-Update_Profile.html');
+
+        }
+    </script>
+</body>
+
+</html>

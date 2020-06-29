@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Community Site is a friendly social networking site!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!-- Custom fonts-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+        <body><header>
+            <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fas fa-at"></i> Community Site
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button> 
+                    <div class="collapse navbar-collapse" id="myTogglerNav">
+                        <div class="navbar-nav mr-auto">
+                            <a class="nav-item nav-link active" href="index.html">Home</a>
+                            <a class="nav-item nav-link " href="/pages/user/User-Search.html">Search Profiles</a>
+                            <a class="nav-item nav-link" href="/pages/registration/Registration.html">Sign Up</a>
+                            <a class="nav-item nav-link" href="/pages/login/LogIn.html">Log In</a>
+                            
+     <!--
+                                <div class="dropdown">
+                                	<a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="myAccountDropdown" aria-haspopup="true" aria-expanded="false" href="#">My Account</a>
+                                	<div class="dropdown-menu" aria-labelledby="myAccountDropdown">
+                                    <a class="dropdown-item" href="Public-Profile.html">My Profile</a>
+                                	<a class="dropdown-item" href="#">Update Profile</a>
+					               <a class="dropdown-item" href="Search.html">Search Profile</a>
+                                	<a class="dropdown-item" href="Home.html">Log Out</a>
+                                </div>
+                            -->
+                        </div>
+                    </div>
+                    <!-- navbar-nav -->
+                
+   
+
+                </div><!-- container -->
+            </nav>
+        </header>
+    <main>
+		<ul class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+  <li class="breadcrumb-item"><a href="/pages/registration/Registration.html">Registration</a></li>
+	<li class="breadcrumb-item"><a href="/pages/registration/Registration-Confirmation.html">Registration Confirmation</a></li>
+</ul> 
+        <div class="container">
+			<form class="mb-5">
+			<fieldset class="form-group">
+				<legend>Confirm Registration</legend>
+			
+                    <fieldset class="form-group">
+                        <legend>Registration</legend>
+                        
+        
+                        
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="register"> <span class="text-danger">*</span></label>
+                            <div class="col-md-10">
+                                <span id="confirmemail"></span>
+                            </div>
+                        </div>
+                                        
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registerpassword">Password<span class="text-danger">*</span></label>
+                            <div class="col-md-10">
+                                <span id="confirmpassword"></span>
+                            </div>
+                        </div>
+                                        
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registerconfirmpassword">Confirm Password<span class="text-danger">*</span></label>
+                            <div class="col-md-10">
+                                <span id="confirmpasswordconfirmation"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registerusername">User Name </label>
+                            <div class="col-md-10">
+                                <span id="confirmusername"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registername">Name </label>
+                            <div class="col-md-10">
+                                <span id="confirmname"></span>
+                            </div>
+                        </div>
+                        
+        
+                        <fieldset class="container border p2 my-5 ">
+                            <legend class="w-auto h5 font-weight-normal">Address:</legend>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registerstreet">Street</label>
+                            <div class="col-md-10">
+                                <span id="confirmstreet"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registersuite">Suite</label>
+                            <div class="col-md-10">
+                                <span id="confirmsuite"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registercity">City</label>
+                            <div class="col-md-10">
+                                    <span id="confirmcity"></span>
+                            </div>
+                        </div>
+        
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registerzipcode">Zipcode</label>
+                            <div class="col-md-10">
+                                <span id="confirmzipcode"></span>
+                            </div>
+                        </div>
+        
+                        </fieldset>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registerphone">Phone </label>
+                            <div class="col-md-10">
+                                <span id="confirmphone"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registerwebsite">Website </label>
+                            <div class="col-md-10">
+                                <span id="confirmwebsite"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registercompanyname">Company Name</label>
+                            <div class="col-md-10">
+                                <span id="confirmcompanyname"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registercompanycatchphrase">Company Catchphrase</label>
+                            <div class="col-md-10">
+                                <span id="confirmcompanycatchphrase"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label text-md-right col-md-2" for="registercompanybusinessslogan">Company Business Slogan</label>
+                            <div class="col-md-10">
+                                <span id="confirmbusinessslogan"></span>
+                            </div>
+                        </div>
+                        
+
+				
+			</fieldset>
+			<div class="text-center">
+			<div class="form-text mb-2"> <span class="text-danger">*</span> marks required fields</div>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#thanksModal" onclick="add()" id="submitbutton">
+              Submit
+            </button>
+
+			<button class="btn btn-secondary" type="button" onclick="edit()" id="editbutton">Edit</button>
+            <div class="" id="loginbuttoncontainer"></div>
+            </div>
+            <!-- The Modal -->
+            <div class="modal" id="thanksModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">You are registered!</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    Thank you for registering with us.
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="logIn(this)">Proceed to Login</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+		</form>
+		</div>
+		
+
+	
+    </main>
+
+    <footer>
+        <!-- Contact Section -->
+        <section class="contact-section bg-dark">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-address-book text-primary mb-2 text-success"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50">Block 123, Imaginary Place Street 99 <br> #01-234, X(123456) </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-envelope-square text-primary mb-2 text-danger"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50">
+                                    contact@communitysite.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-5x fa-phone-square text-primary mb-2 text-info"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4">
+                                <div class="card-text text-black-50"> +65-6123-4567 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="pt-5 d-flex justify-content-center bg-dark">
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+            <i class="fab fa-2x fa-github"></i>
+            </a>
+        </div>
+        <p class="bg-dark text-white-50 text-center text-monospace text py-2" style="margin-bottom: 0;">
+            &copy; Nick
+        </p>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script> 
+      const load = () => {
+        const user= localStorage.getItem('user');
+        const userdata = JSON.parse(user);
+        
+        
+        console.log(userdata);
+
+      
+        
+        const   email = document.getElementById('confirmemail'), 
+                password = document.getElementById('confirmpassword'), 
+                confirmpassword = document.getElementById('confirmpasswordconfirmation'), 
+                username = document.getElementById('confirmusername'), 
+                name = document.getElementById('confirmname'), 
+                street = document.getElementById('confirmstreet'), 
+                suite = document.getElementById('confirmsuite'), 
+                city = document.getElementById('confirmcity'), 
+                zipcode = document.getElementById('confirmzipcode'), 
+                phone = document.getElementById('confirmphone'), 
+                website = document.getElementById('confirmwebsite'),
+                companyname = document.getElementById('confirmcompanyname'), 
+                companycatchphrase = document.getElementById('confirmcompanycatchphrase'), 
+                businessslogan = document.getElementById('confirmbusinessslogan');
+                console.log(email,password,confirmpassword,username,name,street,suite,city,phone,zipcode,website,companyname,companycatchphrase,businessslogan);
+                
+                email.innerText = userdata.email;
+                let pwLen = userdata.password.length;
+                password.innerText = "*".repeat(pwLen);
+                let pwConLen = userdata.confirmpassword.length;
+                confirmpassword.innerText = "*".repeat(pwConLen);
+                username.innerText = userdata.username;
+                name.innerText = userdata.name;
+                console.log(userdata.address)
+                street.innerText = userdata.address.street;
+                suite.innerText = userdata.address.suite;
+                city.innerText = userdata.address.city;
+                zipcode.innerText = userdata.address.zipcode;
+                phone.innerText = userdata.phone;
+                website.innerText = userdata.website;
+                companyname.innerText = userdata.company.name;
+                companycatchphrase.innerText = userdata.company.catchPhrase;
+                businessslogan.innerText = userdata.company.bs;
+    }
+
+        window.onload = load;
+        
+        function add() {
+        let user = localStorage.getItem('user');
+        let currentDB = localStorage.getItem('usersdatabase');
+        
+        
+
+        console.log(currentDB);
+
+        if (currentDB === null) {
+            localStorage.setItem('usersdatabase',      user      );
+        } else {
+
+            let usersdatabaseArray = JSON.parse(localStorage.getItem('usersdatabase'));
+            let usersignup = JSON.parse(localStorage.getItem('user'));
+            usersdatabaseArray.push(usersignup);
+            localStorage.setItem('usersdatabase', JSON.stringify(usersdatabaseArray));
+            console.log(localStorage)
+        }
+
+         console.log('add')
+         let editBtn = document.getElementById('editbutton');
+         let submitButton = document.getElementById('submitbutton');
+         let loginbuttoncontainer = document.getElementById('loginbuttoncontainer')
+         loginbuttoncontainer.innerHTML = `<button class="btn btn-primary" type="button" onclick="logIn()">Proceed to log in</button>`
+         editBtn.remove();
+         submitButton.remove();
+         
+         document.cookie = `loggedInAs=${    JSON.parse(user).id }; path=/`;
+         
+        }
+
+        function logIn(evt) {
+            
+            location.replace('/pages/user/User-Add_Post.html');
+            console.log("hello", location.href )
+         
+            localStorage.removeItem('user')
+            
+        }
+
+        function edit() {
+            location.replace('/pages/registration/Registration.html');
+        }
+
+    </script>
+</body>
+
+</html>
